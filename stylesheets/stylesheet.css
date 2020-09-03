@@ -126,8 +126,8 @@ ul li:before {
 
 table {
   width: 20%;
-  margin: 0 0 20px 0;
-  font-size: 24px;
+  margin: 0 0 20px 5px;
+  font-size: 18px;
 }
 
 th {
@@ -137,18 +137,8 @@ th {
 }
 
 td {
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
-
-hr {
-  height: 0;
-  border: 0;
-  border-bottom: 2px dashed #de5000;
-  color: #de5000;
-}
-
-/* Buttons
-*/
 
 #downloads img {
   display: inline-block;
@@ -171,10 +161,9 @@ footer {
   text-align: right;
 }
 
-#avatar {
+.avatar {
   margin: 10px 10px 10px 10px;
   border: 10px solid;
-  border-color: #1b1b1b;
   /*border-image: url(../images/border.png) 25 round;*/
   text-align: left;
   vertical-align: center;
@@ -190,14 +179,19 @@ footer {
   margin-left: 0px;
 }
 
-#steamOffline {
+/* https://developer.valvesoftware.com/wiki/Steam_Web_API#GetUserStatsForGame_.28v0002.29 */
+
+#personastate0 {
   color: #898989;
+  border-color: #898989;
 }
 
-#steamOnline {
+#personastate1 {
   color: #57cbde;
+  border-color: #57cbde;
 }
 
-#steamInGame {
+#personastate6 {
   color: #90ba3c;
+  border-color: #90ba3c;
 }
