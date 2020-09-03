@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #151515 url("../images/bkg.png");
+  color: #eaeaea;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Merriweather Sans", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+/* General & 'Reset' Stuff */
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+section {
+  display: block;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 -10px;
+}
+
+li {
+  line-height: 1.4 ;
+}
+
+/* Header, <header>
+   header   - container
+   h1       - project name
+   h2       - project description
+*/
+
+header {
+  width: 100%;
+
+  margin: 0 0 20px 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#rnd_bg {
+  padding-bottom: 15px;
+  background-image: linear-gradient(to bottom, rgba(212, 212, 212, 0) 0%, rgba(56, 56, 56, 0.8) 100%);
+}
+
+header h1 {
+  font-size: 84px;
+  line-height: 1.5;
+  margin: 30px 0 30px 0px;
+  font-weight: bold;
+  font-family: Monaco, "Lato", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+header h1:before {
+  content: "~$: ";
+  font-size: 60px;
+  color: #f06500;
+}
+
+
+
+#downloads {
+  display: inline-block;
+  text-align: center;
+  margin: 0px 0px -16px 0px;
+}
+
+/* Main Content
+#main_content {
+  border: 25px solid;
+  border-image: url(../images/border.png) 50 round;
+  -webkit-font-smoothing: antialiased;
+}
+*/
+
+section img {
+  max-width: 100%
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #ffffff;
+}
+
+#main_content h1 {
+  font-size: 30px;
+}
+
+#main_content h2 {
+  font-size: 24px;
+}
+
+#main_content h3 {
+  font-size: 18px;
+}
+
+#main_content h4 {
+  font-size: 14px;
+}
+
+
+ul li {
+  list-style: none;
+}
+
+ul li:before {
+  content: "";
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 13px;
+  color: #de5000;
+  margin-left: -37px;
+  margin-right: 21px;
+  line-height: 16px;
+}
+
+table {
+  width: 20%;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+th {
+  text-align: left;
+  border-bottom: 2px dashed #de5000;
+  padding: 5px 10px;
+}
+
+td {
+  padding: 5px 10px;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 2px dashed #de5000;
+  color: #de5000;
+}
+
+/* Buttons
+*/
+
+#downloads img {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.btn:hover {
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+}
+
+a {
+  color: #ff9900;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+footer {
+  text-align: right;
+}
+
+#avatar {
+  margin: 10px 10px 10px 10px;
+  border: 10px solid;
+  border-color: #1b1b1b;
+  /*border-image: url(../images/border.png) 25 round;*/
+  text-align: left;
+  vertical-align: center;
+  display: inline-block;
+  width: 184px;
+  height: 184px;
+}
+
+.usercontent {
+  float: left;
+  max-width: 400px;
+  text-align: left;
+  margin-left: 0px;
+}
+
+#steamOffline {
+  color: #898989;
+}
+
+#steamOnline {
+  color: #57cbde;
+}
+
+#steamInGame {
+  color: #90ba3c;
+}
