@@ -17,7 +17,7 @@ const {url, key, steamid} = api
 const ProfileURL = `${url}GetPlayerSummaries/v0002/?key=${key}&steamids=${steamid}`
 console.log(ProfileURL)
 
-fetch('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=D719B3760729EF64236A0237802FDEF2&steamids=76561198042014259')
+fetch('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=94E8C5B9F09CF7F6B5D46CBBA8D7DF30&steamids=76561198042014259')
    .then( response => response.json() )
    .then( data => console.log(data) )
 /*fetch(ProfileURL)
