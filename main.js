@@ -10,6 +10,7 @@ const {
   id
 } = apiData
 
+//doesnt fetch anymore
 const apiUrl = `${url}GetPlayerSummaries/v0002/?key=${type}&steamids=${id}`
 
 fetch(apiUrl)
