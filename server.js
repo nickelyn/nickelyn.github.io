@@ -1,7 +1,8 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-const port = 3000;
+
+const PORT = process.env.PORT || 3000;
 
 http.createServer(function (request, response) {
     //console.log('request ', request.url);
@@ -31,5 +32,35 @@ http.createServer(function (request, response) {
     };
 
     var contentType = mimeTypes[extname] || 'application/octet-stream';
-}).listen(port);
-console.log('Server running at localhost:'+port);
+
+    fs.readFile(filePath, function(error, content) {
+        if (error) {
+            if(error.code == 'ENOENT') {
+                fs.readFile('./404.html', function(error, content) {
+                    response.writeHead(404, { 'Content-Type': 'text/html' });
+                    response.end(content, 'utf-8');
+                });
+            }
+            else {
+                response.writeHead(500);
+                response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+            }
+        }
+        else {
+            response.writeHead(200, { 'Content-Type': contentType });
+            response.end(content, 'utf-8');
+        }
+    });
+
+
+    if (request.method=="POST"){
+      let body = '';
+      request.on('data', chunk => {
+        body += chunk.toString();
+      })
+      request.on('end', () => {
+        //console.log(body);
+      })
+    }
+}).listen(PORT);
+console.log('Server running at localhost:'+PORT);
