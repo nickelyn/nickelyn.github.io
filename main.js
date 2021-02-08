@@ -1,6 +1,6 @@
 const apiData = {
   url: 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/',
-  type: '8DDDBE9C6A344ECDA9EC11B6BA6C38DD',
+  type: 'E611608D49739DF5CFE77EE05DA49549',
   id: '76561198042014259',
 }
 
