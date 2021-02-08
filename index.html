@@ -2,80 +2,102 @@
 <html>
 
   <head>
+    <script src="./js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="icon" href="./images/favicon.png">
     <title>nickely</title>
-    <script src="./js/main.js"></script>
   </head>
 
   <body>
+    <div id="loading"></div>
+    <script>
+      function onReady(callback) {
+        var intervalId = window.setInterval(function () {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+          }
+        }, 1000);
+      }
 
-    <header id="rnd_bg">
-      <div class="usercontent"></div>
+      function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible
+          ? 'block'
+          : 'none';
+      }
+
+      onReady(function () {
+        setVisible('#contents', true);
+        setVisible('#loading', false);
+      });
+    </script>
+    <div id="contents">
+      <header id="rnd_bg">
+        <div class="usercontent"></div>
+        <div class="container">
+          <h1>nickely</h1>
+
+          <section id="downloads">
+            <a href="https://www.youtube.com/c/nickely">
+              <img src="../images/youtubeicon.png" width="64px" height="48px">
+            </a>
+            <a href="https://github.com/nickelyn/">
+              <img src="../images/githubicon.png" width="48px" height="48px">
+            </a>
+            <a href="https://steamcommunity.com/id/nickely">
+              <img src="/images/steamicon.png" width="48px" height="48px">
+            </a>
+          </section>
+        </div>
+        <script>
+          function getRandomBG() {
+            var x = Math.round(Math.random() * 20) + 1/* random number from 1 to 21 */
+            document.getElementById("rnd_bg").style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(217, 217, 217, 0.26) 100%),  url('../images/bg_image${x}.jpg') 0% ${x + 20}%`
+          }
+
+          new getRandomBG;
+        </script>
+      </header>
+
       <div class="container">
-        <h1>nickely</h1>
-
-        <section id="downloads">
-          <a href="https://www.youtube.com/c/nickely">
-            <img src="../images/youtubeicon.png" width="64px" height="48px">
-          </a>
-          <a href="https://github.com/nickelyn/">
-            <img src="../images/githubicon.png" width="48px" height="48px">
-          </a>
-          <a href="https://steamcommunity.com/id/nickely">
-            <img src="/images/steamicon.png" width="48px" height="48px">
-          </a>
-        </section>
-      </div>
-      <script>
-        function getRandomBG() {
-          var x = Math.round(Math.random() * 20) + 1/* random number from 1 to 21 */
-          document.getElementById("rnd_bg").style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(217, 217, 217, 0.26) 100%),  url('../images/bg_image${x}.jpg') 0% ${x + 20}%`
-        }
-
-        getRandomBG();
-      </script>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>Information</h3>
-        <p>
-          <code>&lt;yo. I'm Nicholas, your local
-            <span style="color:#ff9900">
-              <strong>retard</strong>
-            </span>
-            on the internet.
-            <span style="color:#ff9900">
-              <strong>21</span>
-              of age. Small amounts of experience in a variety of fields within programming. I suck at HTML & Javascript as well as C#. I also suck at C from time to time.&gt;</code>
-          </p>
-          <h3>My Projects:</h3>
+        <section id="main_content">
+          <h3>Information</h3>
           <p>
-            <a href="/projects/">CRViewer (WIP)</a>
-          </p>
-          <p>
-            <a href="/projects/">Pico (WIP)</a>
-          </p>
-          <p>
-            <a href="/projects/">untitled game</a>
-          </p>
-          <h3>Shoutouts</h3>
-          <p>James King (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/Metapyziks/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Metapyziks">@Metapyziks</a>) for making
-            <strong>SourceUtils</strong>
-            and
-            <strong>GOKZReplayViewer</strong>.</p>
+            <code>&lt;yo. I'm Nicholas, your local
+              <span style="color:#ff9900">
+                <strong>retard</strong>
+              </span>
+              on the internet.
+              <span style="color:#ff9900">
+                <strong>21</span>
+                of age. Small amounts of experience in a variety of fields within programming. I suck at HTML & Javascript as well as C#. I also suck at C from time to time.&gt;</code>
+            </p>
+            <h3>My Projects:</h3>
+            <p>
+              <a href="/projects/">CRViewer (WIP)</a>
+            </p>
+            <p>
+              <a href="/projects/">Pico (WIP)</a>
+            </p>
+            <p>
+              <a href="/projects/">untitled game</a>
+            </p>
+            <h3>Shoutouts</h3>
+            <p>James King (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/Metapyziks/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Metapyziks">@Metapyziks</a>) for making
+              <strong>SourceUtils</strong>
+              and
+              <strong>GOKZReplayViewer</strong>.</p>
 
-          <footer class="site-footer">
-            <span class="site-footer-owner">Maintained by
-              <a href="https://github.com/nickelyn">nickely</a>.</span>
-          </footer>
-        </section>
+            <footer class="site-footer">
+              <span class="site-footer-owner">Maintained by
+                <a href="https://github.com/nickelyn">nickely</a>.</span>
+            </footer>
+          </section>
+        </div>
       </div>
     </body>
-
   </html>

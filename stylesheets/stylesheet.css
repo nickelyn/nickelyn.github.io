@@ -1,15 +1,17 @@
 body {
+  background: url("../images/bkg.png") no-repeat center center fixed;
   margin: 0;
   padding: 0;
-  background: #151515 url("../images/bkg.png");
-  color: #eaeaea;
   font-size: 12px;
   line-height: 1.5;
+  color: #e6e6e6;
   font-family: "Merriweather Sans", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* General & 'Reset' Stuff */
-
 .container {
   width: 100%;
   max-width: 600px;
@@ -27,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 li {
-  line-height: 1.4 ;
+  line-height: 1.4;
 }
 
 /* Header, <header>
@@ -35,10 +37,8 @@ li {
    h1       - project name
    h2       - project description
 */
-
 header {
   width: 100%;
-
   margin: 0 0 20px 0;
   vertical-align: middle;
   text-align: center;
@@ -52,7 +52,7 @@ header {
 header h1 {
   font-size: 84px;
   line-height: 1.5;
-  margin: 30px 0 30px 0px;
+  margin: 0 0 0 0;
   font-weight: bold;
   font-family: Monaco, "Lato", sans-serif;
   color: #ffffff;
@@ -67,8 +67,6 @@ header h1:before {
   color: #f06500;
 }
 
-
-
 #downloads {
   display: inline-block;
   text-align: center;
@@ -82,7 +80,6 @@ header h1:before {
   -webkit-font-smoothing: antialiased;
 }
 */
-
 section img {
   max-width: 100%
 }
@@ -108,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
 #main_content h4 {
   font-size: 14px;
 }
-
 
 ul li {
   list-style: none;
@@ -144,7 +140,6 @@ td {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
-
 }
 
 .btn:hover {
@@ -162,14 +157,13 @@ footer {
 }
 
 .avatar {
-  margin: 10px 10px 10px 10px;
-  border: 10px solid;
+  border: 5px solid;
   /*border-image: url(../images/border.png) 25 round;*/
   text-align: left;
   vertical-align: center;
   display: inline-block;
-  width: 184px;
-  height: 184px;
+  width: 185px;
+  height: 185px;
 }
 
 .usercontent {
@@ -180,11 +174,11 @@ footer {
 }
 
 /* https://developer.valvesoftware.com/wiki/Steam_Web_API#GetUserStatsForGame_.28v0002.29 */
-
 #personastate0 {
   color: #898989;
   border-color: #898989;
 }
+
 
 #personastate1 {
   color: #57cbde;
@@ -194,4 +188,18 @@ footer {
 #personastate6 {
   color: #90ba3c;
   border-color: #90ba3c;
+}
+
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(20, 20, 20, 1);
+  background-image: url("../images/kz.gif");
+  background-repeat: no-repeat;
+  background-position: center;
 }

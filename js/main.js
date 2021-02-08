@@ -1,5 +1,3 @@
-console.log('This would be the main JS file.');
-
 const apiData = {
   url: 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/',
   type: '8DDDBE9C6A344ECDA9EC11B6BA6C38DD',
