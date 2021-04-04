@@ -1,3 +1,4 @@
+//TODO Make it work without temporary access
 const apiData = {
   url: 'https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/',
   type: 'E611608D49739DF5CFE77EE05DA49549',
@@ -25,7 +26,7 @@ fetch(apiUrl)
 
 
 const generateHtml = (data) => {
-  console.log(data)
+  //console.log(data)
   var player = data.response.players[0]
   var state = player.personastate
   var img = player.avatarfull

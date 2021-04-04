@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/github-dark.css" media="screen">
+  <link rel="icon" href="/images/favicon.png">
+  <title>stuff</title>
+</head>
+
+<body>
+
+  <header style="background-image: linear-gradient(120deg, rgb(96, 125, 139), rgb(172, 186, 193))">
+    <div class="container">
+      <h1>stuff</h1>
+    </div>
+  </header>
+  <section id="main_content">
+    <h1>Wichmann–Hill (broken. fix)</h1>
+  <p>A pseudorandom number generator (PRNG) proposed in 1982 by Brian Wichmann and David Hill. Consists of three linear congruential generators. Range of 1 to 30000.</p>
+
+  <input type=number min="1" max="30000" step="1" id="seed1" value=""/>
+  <input type=number min="1" max="30000" step="1" id="seed2" value=""/>
+  <input type=number min="1" max="30000" step="1" id="seed3" value=""/>
+  <input type=button onclick="wichmann('seed1','seed2','seed3');"/>
+  <h3 id="res"></h3>
+  <canvas id="canvas" width="300" height="300"></canvas>
+  <script type="text/javascript">
+  //TODO make it work lol
+  function wichmann(a, b, c) {
+    s1 = document.getElementById(a).value;
+    s2 = document.getElementById(b).value;
+    s3 = document.getElementById(c).value;
+  	var reg1, reg2, reg3, r;
+      // s1, s2, s3 should be random from 1 to 30,000. Use clock if available.
+      reg1 = ((171 * s1) % 30269)
+      reg2 = ((172 * s2) % 30307)
+      reg3 = ((170 * s3) % 30323)
+
+  	r = ( (s1/30269) + (s2/30307) + (s3/30323) % 1 )
+    document.getElementById("res").innerHTML = r;
+  }
+
+  var canvas = document.getElementById("canvas"),
+      context = canvas.getContext("2d");
+
+  var a = 1234321241;
+  var c = 2324234;
+  m = Math.pow(2, 31);
+  var seed = 1314;
+  //var seed = document.getElementById("res").innerHTML;
+
+  function nRand() {
+    seed = (a * seed + c) % m;
+    return seed;
+  }
+
+  function nRandFloat() {
+    return nRand() / m;
+  }
+
+  var y = 0;
+  draw();
+  function draw() {
+    for (var x = 0; x < 300; x++) {
+      if (nRandFloat() < 0.5) {
+        context.fillRect(x, y, 1, 1);
+      }
+    }
+    y++;
+    if (y < 600) {
+      requestAnimationFrame(draw);
+    }
+  }
+  </script>
+</section>
+  <footer class="footer">
+    <span class="footer">Maintained by
+      <a href="https://github.com/nickelyn">nickely</a>.</span>
+  </footer>
+    </section>
+
+  </div>
+
+
+</body>
+
+</html>

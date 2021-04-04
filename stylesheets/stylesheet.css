@@ -12,6 +12,11 @@ body {
 }
 
 /* General & 'Reset' Stuff */
+#canvas {
+  border: 4px;
+  margin: 50px;
+}
+
 .container {
   width: 100%;
   max-width: 600px;
@@ -62,9 +67,10 @@ header h1 {
 }
 
 header h1:before {
-  content: "~$: ";
+  font-weight: bold;
+  content: "$: ";
   font-size: 60px;
-  color: #f06500;
+  color: #607d8b;
 }
 
 #downloads {
@@ -146,14 +152,22 @@ td {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
 }
 
+strong {
+  color: #607d8b;
+}
+
 a {
-  color: #ff9900;
+  color: #607d8b;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
-footer {
-  text-align: right;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .avatar {
